@@ -1,0 +1,77 @@
+{
+  "students": [
+    {
+      "name": "oyusgyqw",
+      "email": "vcgu@gmail.com",
+      "id": 1
+    },
+    {
+      "name": "Aayushmaan Rao",
+      "email": "aayushmaanrao24@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "Aayushmaan Rao dfehheth",
+      "email": "aayushmaanrao24@gmail.com",
+      "id": 3
+    }
+  ],
+  "registeredUsers": [
+    {
+      "name": "Aayushmaan Rao",
+      "email": "aayushmaanrao24@gmail.com",
+      "password": "aayu",
+      "confirmPassword": "",
+      "id": 1
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": "",
+      "id": 2
+    },
+    {
+      "name": "wdwed",
+      "email": "8449326848",
+      "password": "aa",
+      "confirmPassword": "aa",
+      "id": 3
+    },
+    {
+      "name": "yash",
+      "email": "aayushmanrao9@gmail.com",
+      "password": "ss",
+      "confirmPassword": "ss",
+      "id": 4
+    },
+    {
+      "name": "sadhu",
+      "email": "vcgu@gmail.com",
+      "password": "ww",
+      "confirmPassword": "ww",
+      "id": 5
+    },
+    {
+      "name": "kokla",
+      "email": "kokla@h.com",
+      "password": "kk",
+      "confirmPassword": "kk",
+      "id": 6
+    },
+    {
+      "name": "yash",
+      "email": "vcgu@gmail.com",
+      "password": "ff",
+      "confirmPassword": "ff",
+      "id": 7
+    },
+    {
+      "name": "wgw4g",
+      "email": "vcgu@gmail.com",
+      "password": "eve",
+      "confirmPassword": "rer",
+      "id": 8
+    }
+  ]
+}

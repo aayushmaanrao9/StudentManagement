@@ -1,0 +1,10 @@
+.card {
+  padding: 15px 30px 15px 30px;
+  background-color: #f39b8d;
+}
+button {
+  width: 100%;
+  position: relative;
+
+  margin-top: 15px;
+}

@@ -1,0 +1,30 @@
+{
+  "students": [
+    {
+      "name": "rao",
+      "email": "aayushmaanrao24@gmail.com",
+      "id": 6
+    },
+    {
+      "name": "yash",
+      "email": "yash@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Aayushmaan Rao",
+      "email": "8449326848",
+      "id": 9
+    },
+    {
+      "name": "kishu",
+      "email": "aayushmanrao9@gmail.com",
+      "id": 10
+    },
+    {
+      "name": "snjdondo2ednoi2e",
+      "email": "aayushmanrao9@gmail.com",
+      "id": 11
+    }
+  ],
+  "signUpUsers": []
+}
