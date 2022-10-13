@@ -42,7 +42,7 @@ export class RegistrationStudentComponent implements OnInit {
     this.http.post(this.url, this.registerForm.value).subscribe((res) => {
       this.message = true;
       this.registerForm.reset();
-      setTimeout(() => this.router.navigate(['login']), 10000);
+      setTimeout(() => this.router.navigate(['login']), 2000);
     });
   }
   removeAlert() {

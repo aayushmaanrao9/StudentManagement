@@ -4,6 +4,7 @@
       <div class="card">
         <div
           *ngIf="message"
+          style="position: relative"
           class="alert alert-success alert-dismissible fade show"
           role="alert"
         >
@@ -14,6 +15,12 @@
             class="btn-close"
             data-bs-dismiss="alert"
             aria-label="Close"
+            style="
+              position: absolute;
+              right: 10px;
+              width: fit-content;
+              margin: 0;
+            "
           ></button>
         </div>
         <div class="text-center">
@@ -30,6 +37,14 @@
               id="name"
               placeholder="Name"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['name'].dirty &&
+                registerForm.hasError('required', 'name')
+              "
+              >*Name is required</span
+            >
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">Email</label>
@@ -40,6 +55,14 @@
               id="email"
               placeholder="abc@example.com"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['email'].dirty &&
+                registerForm.hasError('required', 'email')
+              "
+              >*Email is required</span
+            >
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
@@ -50,6 +73,14 @@
               id="password"
               placeholder="password"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['password'].dirty &&
+                registerForm.hasError('required', 'password')
+              "
+              >*Password is required</span
+            >
           </div>
           <div class="mb-3">
             <label for="password" class="form-label">Confirm Password</label>
@@ -60,8 +91,22 @@
               id="password"
               placeholder="password"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                registerForm.controls['confirmPassword'].dirty &&
+                registerForm.hasError('required', 'confirmPassword')
+              "
+              >*Confirm Password is required</span
+            >
           </div>
-          <button type="submit" class="btn btn-primary">Register</button>
+          <button
+            type="submit"
+            [disabled]="!registerForm.valid"
+            class="btn btn-primary"
+          >
+            Register
+          </button>
         </form>
         <div style="text-align: center; margin-top: 10px">
           Already Registered?<a routerLink="/login">Login</a>

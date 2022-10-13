@@ -16,6 +16,14 @@
               id="email"
               placeholder="abc@example.com"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['email'].dirty &&
+                loginForm.hasError('required', 'email')
+              "
+              >*Email is required</span
+            >
           </div>
           <div class="mb-3 login">
             <label for="password" class="form-label">Password</label>
@@ -26,8 +34,22 @@
               id="password"
               placeholder="Password"
             />
+            <span
+              class="text-danger"
+              *ngIf="
+                loginForm.controls['password'].dirty &&
+                loginForm.hasError('required', 'password')
+              "
+              >*Password is required</span
+            >
           </div>
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button
+            type="submit"
+            [disabled]="!loginForm.valid"
+            class="btn btn-primary"
+          >
+            Login
+          </button>
         </form>
         <div style="text-align: center; margin-top: 10px">
           New student?<a routerLink="/register">Register</a>
