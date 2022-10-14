@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { AddStudentComponent } from './components/add-student/add-student.component';
 import { EditStudentComponent } from './components/edit-student/edit-student.component';
 import { ListStudentComponent } from './components/list-student/list-student.component';
-import { LoginStudentComponent } from './components/login-student/login-student.component';
+
 import { RegistrationStudentComponent } from './components/registration-student/registration-student.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DataTablesModule } from 'angular-datatables';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { StudentDetailsComponent } from './components/dashboard/student-details/student-details.component';
+import { CoursesComponent } from './components/dashboard/courses/courses.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +24,12 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AddStudentComponent,
     EditStudentComponent,
     ListStudentComponent,
-    LoginStudentComponent,
     RegistrationStudentComponent,
     PageNotFoundComponent,
+    LoginPageComponent,
+    DashboardComponent,
+    StudentDetailsComponent,
+    CoursesComponent,
   ],
   imports: [
     BrowserModule,

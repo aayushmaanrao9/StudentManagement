@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./registration-student.component.css'],
 })
 export class RegistrationStudentComponent implements OnInit {
-  message: boolean = false;
   registerForm: FormGroup;
   url = 'http://localhost:3000/registeredUsers';
   constructor(
@@ -40,12 +39,10 @@ export class RegistrationStudentComponent implements OnInit {
   }
   register() {
     this.http.post(this.url, this.registerForm.value).subscribe((res) => {
-      this.message = true;
       this.registerForm.reset();
-      setTimeout(() => this.router.navigate(['login']), 2000);
+      alert('Student registered successfully!');
+
+      this.router.navigate(['login']);
     });
-  }
-  removeAlert() {
-    this.message = false;
   }
 }

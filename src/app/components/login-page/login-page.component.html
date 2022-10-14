@@ -1,0 +1,80 @@
+<div class="container">
+  <div
+    class="card"
+    style="
+      padding: 20px 60px 60px 40px;
+      border-radius: 12px;
+      box-shadow: 5px 8px grey;
+    "
+  >
+    <h2>E-School</h2>
+    <div class="row">
+      <div class="left-content col-md-7">
+        <h5>Student Management System for Schools</h5>
+      </div>
+      <div class="right-content col-md-5">
+        <div class="card1" style="padding: 20px 20px">
+          <div>
+            <div class="text-center">
+              <h2>Login</h2>
+              <h6>Enter your email and password</h6>
+            </div>
+            <form [formGroup]="loginForm" (ngSubmit)="login()">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input
+                  type="email"
+                  formControlName="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="abc@example.com"
+                />
+                <span
+                  class="text-danger"
+                  style="font-size: 14px"
+                  *ngIf="
+                    loginForm.controls['email'].dirty &&
+                    loginForm.hasError('required', 'email')
+                  "
+                  >*Email is required</span
+                >
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  formControlName="password"
+                  class="form-control"
+                  id="password"
+                  placeholder="Password"
+                />
+                <span
+                  class="text-danger"
+                  style="font-size: 14px"
+                  *ngIf="
+                    loginForm.controls['password'].dirty &&
+                    loginForm.hasError('required', 'password')
+                  "
+                  >*Password is required</span
+                >
+              </div>
+              <button
+                type="submit"
+                [disabled]="!loginForm.valid"
+                class="btn btn-primary"
+              >
+                Login
+              </button>
+            </form>
+            <br />
+            <div style="text-align: center; margin-top: 5px">
+              New student?<a routerLink="/register" routerLinkActive="active"
+                >Register</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

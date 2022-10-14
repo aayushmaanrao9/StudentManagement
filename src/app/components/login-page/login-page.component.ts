@@ -4,12 +4,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login-student',
-  templateUrl: './login-student.component.html',
-  styleUrls: ['./login-student.component.css'],
+  selector: 'app-login-page',
+  templateUrl: './login-page.component.html',
+  styleUrls: ['./login-page.component.css'],
 })
-export class LoginStudentComponent implements OnInit {
+export class LoginPageComponent implements OnInit {
   loginForm: FormGroup;
+  change: boolean = false;
   url = 'http://localhost:3000/registeredUsers';
   constructor(
     private fb: FormBuilder,
@@ -41,7 +42,7 @@ export class LoginStudentComponent implements OnInit {
         if (student) {
           alert('Logged in successfully!');
           this.loginForm.reset();
-          this.router.navigate(['']);
+          this.router.navigate(['dashboard']);
         } else {
           alert('student not found!');
         }
