@@ -1,1 +1,107 @@
-<p>student-details works!</p>
+<div class="wrapper rounded">
+  <div class="h3">Student Details</div>
+
+  <form [formGroup]="detailsForm" class="form" (ngSubmit)="saveDetails()">
+    <div class="row">
+      <div class="col-md-4 mt-md-0 mt-3">
+        <label>Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="fullName"
+          required
+        />
+      </div>
+      <div class="col-md-4 mt-md-0 mt-3">
+        <label>Class</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="class"
+          required
+        />
+      </div>
+      <div class="col-md-4 mt-md-0 mt-3">
+        <label>Student Id</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="regNo"
+          required
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <label>Birthday</label>
+        <input
+          type="date"
+          class="form-control"
+          formControlName="bday"
+          required
+        />
+      </div>
+      <div class="col-md-6 mt-md-0 mt-3">
+        <label>Gender</label>
+        <div class="d-flex align-items-center mt-2">
+          <label class="option">
+            <input
+              type="radio"
+              formControlName="gender"
+              value="male"
+              name="gender"
+            />Male
+            <span class="checkmark"></span>
+          </label>
+          <label class="option ms-4">
+            <input
+              type="radio"
+              formControlName="gender"
+              value="female"
+              name="gender"
+            />Female
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mt-md-0 mt-3">
+        <label>Email</label>
+        <input
+          type="email"
+          formControlName="email"
+          class="form-control"
+          required
+        />
+      </div>
+      <div class="col-md-6 mt-md-0 mt-3">
+        <label>Phone Number</label>
+        <input
+          type="tel"
+          formControlName="phone"
+          class="form-control"
+          required
+        />
+      </div>
+    </div>
+    <div class="my-md-2 my-3">
+      <label>Subjects</label>
+      <select
+        id="sub"
+        class="select"
+        multiple
+        formControlName="subjects"
+        required
+      >
+        <option value="" selected hidden>Choose Option</option>
+        <option value="Maths">Maths</option>
+        <option value="Science">Science</option>
+        <option value="Social">Social</option>
+        <option value="Hindi">Hindi</option>
+        <option value="Hindi">English</option>
+      </select>
+    </div>
+    <button class="btn btn-primary mt-3 pt-1 pb-1 px-3">Save</button>
+  </form>
+</div>

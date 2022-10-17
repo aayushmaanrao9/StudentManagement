@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 export class LoginPageComponent implements OnInit {
   loginForm: FormGroup;
   change: boolean = false;
+
+  loggedInStudentData: any = [];
   url = 'http://localhost:3000/registeredUsers';
   constructor(
     private fb: FormBuilder,
@@ -40,6 +42,9 @@ export class LoginPageComponent implements OnInit {
           );
         });
         if (student) {
+          console.log(student);
+
+          this.loggedInStudentData = student;
           alert('Logged in successfully!');
           this.loginForm.reset();
           this.router.navigate(['dashboard']);

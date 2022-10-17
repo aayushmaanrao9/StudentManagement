@@ -9,3 +9,7 @@
   border-radius: 12px;
   height: 400px;
 }
+img {
+  position: relative;
+  top: 16%;
+}

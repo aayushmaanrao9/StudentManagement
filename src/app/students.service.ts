@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class StudentsService {
-  url: string = 'http://localhost:3000/students';
+  url: string = 'http://localhost:3000/registeredUsers';
 
   constructor(private http: HttpClient) {}
   getAllStudents() {
@@ -27,4 +27,7 @@ export class StudentsService {
   updateStudent(id: number, data: any) {
     return this.http.put(`${this.url}/${id}`, data);
   }
+  // saveDetails(id: number, data: any){
+  //   return this.http.
+  // }
 }

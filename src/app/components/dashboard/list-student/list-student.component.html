@@ -1,0 +1,29 @@
+<div class="card" *ngIf="!change">
+  <h3>Students List</h3>
+  <table class="table">
+    <!-- datatable [dtOptions]="dtOptions"-->
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let student of studentData">
+        <th scope="row">{{ student.id }}</th>
+        <td>{{ student.name }}</td>
+        <td>{{ student.email }}</td>
+        <td>
+          <a routerLink="edit/{{ student.id }}" (click)="editPage()"
+            ><i class="fa-solid fa-pen-to-square"></i></a
+          >&nbsp;
+          <i class="fa-regular fa-trash-can" (click)="onDelete(student.id)"></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<router-outlet></router-outlet>

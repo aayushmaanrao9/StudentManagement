@@ -18,13 +18,6 @@
   ],
   "registeredUsers": [
     {
-      "name": "Aayushmaan Rao",
-      "email": "aayushmaanrao24@gmail.com",
-      "password": "aayu",
-      "confirmPassword": "",
-      "id": 1
-    },
-    {
       "name": "",
       "email": "",
       "password": "",
@@ -60,10 +53,8 @@
       "id": 6
     },
     {
-      "name": "yash",
+      "name": "yashgj,fhj",
       "email": "vcgu@gmail.com",
-      "password": "ff",
-      "confirmPassword": "ff",
       "id": 7
     },
     {
@@ -184,6 +175,34 @@
       "password": "aaa",
       "confirmPassword": "aaa",
       "id": 24
+    }
+  ],
+  "studentDetails": [
+    {
+      "fullName": "rghrh",
+      "class": 4,
+      "regNo": 34151,
+      "bday": "2022-09-26",
+      "gender": "female",
+      "email": "rgbrt",
+      "phone": "98765",
+      "subject": "Social",
+      "id": 1
+    },
+    {
+      "fullName": "eahaeth",
+      "class": 6,
+      "regNo": 1234,
+      "bday": "2022-10-13",
+      "gender": "female",
+      "email": "qefwegfwegwrggggggg",
+      "phone": "34553455",
+      "subject": [
+        "Science",
+        "Social",
+        "Hindi"
+      ],
+      "id": 2
     }
   ]
 }
